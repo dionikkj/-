@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+    #login{
+        transition: 0.5s;
+        margin: 10px;
+        cursor: pointer;
+        border: solid rgb(0, 0, 0) 1px;
+        color: white;
+        background-color: rgb(22, 5, 83);
+        font-size: 17px;
+        padding: 10px 20px 10px 20px;
+    }
+    #signin{
+        transition: 0.5s;
+        margin: 10px;
+        cursor: pointer;
+        border: solid rgb(0, 0, 0) 1px;
+        color: white;
+        background-color: rgb(22, 5, 83);
+        font-size: 17px;
+        padding: 10px 17px 10px 17px;
+    }
+    #login:hover{
+        color: black;
+        transition: 0.5s;
+       background-color: rgba(165, 42, 42, 0);
+    }
+    #signin:hover{
+        color: black;
+        transition: 0.5s;
+       background-color: rgba(165, 42, 42, 0);
+    }
+    #quadradotelalogin{
+        border: solid rgb(22, 5, 83);
+        border-width: 1px 0px 1px 0px;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        background-color: rgba(245, 222, 179, 0);
+    }
+
+    body {
+
+        background-image: url("images&gifs/montanha3.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+
+    }
+
+    * {
+        font-family: "Poppins", sans-serif;
+
+        box-sizing: border-box;
+        margin: 8px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #squaresignin {
+        
+        display: none;
+        color: rgb(0, 0, 0);
+        border: solid rgb(0, 0, 0) 1px;
+        
+        width: 450px;
+        backdrop-filter: opacity(100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 5px;
+    }
+
+    .fundo {
+        background-image: url("images&gifs/montanha3.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        margin: 0;
+        top: 1px;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        filter: blur(4px);
+        z-index: -1;
+    }
+    .buttonreset{
+        background-color: rgba(67, 70, 68, 0);
+        left: 80px;
+        cursor: pointer;
+        border: solid rgb(0, 0, 0) 1px;
+        width: 100px;
+        height: 31px;
+    }
+
+    .buttonenviar {
+        background-color: rgba(71, 250, 101, 0);
+        left: 80px;
+        cursor: pointer;
+        border: solid rgb(0, 0, 0) 1px;
+        width: 100px;
+        height: 31px;
+        transition: 0.5s;
+    }
+    .buttonvoltar{
+        color: white;
+        background-color: rgb(204, 8, 2);
+        left: 80px;
+        cursor: pointer;
+        border: solid rgb(0, 0, 0) 1px;
+        position: absolute;
+        bottom: 13px;
+        left: 286px;
+        width: 100px;
+        height: 31px;
+        transition: 0.5s;
+    }
+    .buttonvoltar:hover{
+        transition: 0.5s;
+        color: black;
+        background-color: rgba(240, 248, 255, 0);
+
+    }
+
+    input {
+        cursor: pointer;
+        border: solid;
+        border-width: 0px 0px 1px 0px;
+        background-color: rgba(253, 253, 253, 0);
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    select {
+        cursor: pointer;
+        margin-top: 15px;
+        padding: 5px;
+    }
+
+    #square2 {
+        position: relative;
+        left: 30px;
+        display: flex;
+    }
+
+    #nome {
+        position: relative;
+        left: 5px;
+    }
+
+    #senha {
+        position: relative;
+        left: 2px;
+    }
+
+    #email {
+        position: relative;
+        left: 9px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    fieldset {
+        border: solid rgb(0, 0, 0) 1px;
+    }
+
+    img {
+
+        height: 400px;
+    }
+
+    #squarelogin{
+        display: none;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        border: solid rgb(0, 0, 0) 2px;
+        width: 300px;
+        height: 230px;
+        backdrop-filter: opacity(100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 5px;
+    }
+    .fundo2{
+        background-image: url("images&gifs/montanha3.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        margin: 0;
+        top: 1px;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        filter: blur(4px);
+        z-index: -1;
+    }
+    h1{
+        font-size: 30px;
+        
+    }
+    #enviar{
+        cursor: pointer;
+        border: solid 1px;
+        background-color: rgba(240, 248, 255, 0);
+        position: relative;
+       height: 32px;
+       width: 65px;
+        
+    }
+    #buttonvoltar{
+        color: white;
+        cursor: pointer;
+        border: black solid 1px;
+        background-color: rgb(204, 8, 2);
+        height: 32px;
+       width: 65px;
+       transition: 0.5s;
+
+    }
+    #buttonvoltar:hover{
+        background-color: rgba(240, 248, 255, 0);
+        color: black;
+        transition: 0.5s;
+    }
+.logo{
+    position: relative;
+    left: 100px;
+    height: 90px;
+}
+   
+</style>
+
+<body>
+    <div id="quadradaoinicio">
+    <img class="logo" src="images&gifs/logod1.png" alt="logo">
+    <div id="quadradotelalogin">
+    <button id="login" onclick="teladecadastros('squarelogin')">Login</button>
+    <button id="signin" onclick="teladecadastros('squaresignin')">Sign Up</button>
+</div>
+</div>
+    <div id="squaresignin">
+        <h1><strong>Sign Up</strong></h1>
+        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+
+            <fieldset>
+                <legend>Dados de acesso</legend>
+                <Label for="nome">Nome: </Label><input id="nome" name="nome" type="text" placeholder="Nome"
+                    autocomplete="off" required>
+                <br>
+                <label for="senha">Senha:</label> <input type="password" id="senha" name="senha" placeholder="Senha"
+                    autocomplete="off" required>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Cadastro</legend>
+                <label for="email">Email:</label> <input type="email" id="email" name="email" placeholder="Email"
+                    autocomplete="off" required>
+                <br>
+                <label for="nasc">Data de nascimento:</label> <input type="date" id="nasc" name="Data de nascimento">
+                <br>
+                <input name="tipo" type="radio" value="pf" id="pf"> <label for="pf"> Pessoa fisica</label>
+                <input name="tipo" type="radio" value="pj" id="pj"> <label for="pj"> Pessoa juridica</label>
+                <br>
+                <input name="termos" type="checkbox" value="sim" id="termos"> <label for="termos"> Li e aceito os termos
+                    da página.</label>
+                <br>
+                <input name="info" type="checkbox" value="sim" id="info"> <label for="info"> Desejo receber o
+                    informativo.</label>
+                <br>
+                <label for="curso">Curso:</label>
+                <select name="curso" id="curso">
+                    <option value="">Selecione</option>
+                    <option value="JS">JavaScript</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>Exel</option>
+                    <option>Word</option>
+                </select>
+            </fieldset>
+
+            <div id="square2">
+                <input class="buttonenviar" type="submit">
+                <input class="buttonreset" type="reset">
+                
+                
+            </div>
+            
+            <div class="fundo"></div>
+        </form>
+        <button class="buttonvoltar" onclick="voltar('squaresignin')">Voltar</button>
+    </div>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+        
+        <div id="squarelogin">
+            <h1>Log In</h1>
+            
+        <label for="email">Email:</label> <input type="email" id="email" name="email" placeholder="Email"
+            autocomplete="off" required>
+        <label for="senha">Senha:</label> <input type="password" id="senha" name="senha" placeholder="Senha"
+            autocomplete="off" required>
+            <div class="fundo2"></div>
+
+            
+    </form>
+    <input id="enviar" type="submit" value="Entrar">
+    <button id="buttonvoltar" onclick="voltar('squarelogin')">Voltar</button>
+    
+</div>
+</body>
+
+<script>
+    function teladecadastros(x) {
+        document.getElementById(x).style.display = "block"
+        document.getElementById("quadradaoinicio").style.display = "none"
+    }
+    function voltar(x){
+        document.getElementById(x).style.display = "none"
+        document.getElementById("quadradaoinicio").style.display = "block"
+    }
+
+</script>
+
+</html>
